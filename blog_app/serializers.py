@@ -24,6 +24,8 @@ class LogoutSerializer(serializers.Serializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
+    views = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = Post
-        fields = ['id', 'title', 'content', 'author', 'created_at']
+        fields = ['id', 'title', 'content', 'author', 'created_at', 'views']
