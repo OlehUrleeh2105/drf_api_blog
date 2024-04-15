@@ -30,9 +30,23 @@ Ensure you are inside the activated virtual environment before installing depend
 pip install -r requirements.txt
 ```
 
+## Migrations
+
+Before running the project, make sure to apply migrations:
+
+```bash
+python manage.py makemigrations
+```
+
+```bash
+python manage.py migrate
+```
+
+This will create necessary database tables based on your Django models.
+
 ## Running the Project
 
-Once dependencies are installed, you can run the project using the following command:
+Once dependencies and migrations are installed, you can run the project using the following command:
 
 ```bash
 python manage.py runserver
